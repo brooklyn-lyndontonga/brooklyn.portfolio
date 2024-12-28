@@ -33,7 +33,7 @@ export default {
     },
   },
 
-  production: {
+    production: {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
