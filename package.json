@@ -1,13 +1,23 @@
 {
   "name": "boilerplate-fullstack-routing",
-  "type": "module",
   "version": "2.0.0",
-  "main": "server/index.js",
-  "license": "MIT",
+  "description": "## Setup",
   "keywords": [
     "fullstack",
     "routing"
   ],
+  "homepage": "https://github.com/brooklyn-lyndontonga/brooklyn.portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/brooklyn-lyndontonga/brooklyn.portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brooklyn-lyndontonga/brooklyn.portfolio.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "server/index.js",
   "scripts": {
     "test": "vitest",
     "start": "node dist/server.js",
@@ -20,16 +30,10 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "knex": "knex --knexfile ./server/db/knexfile.js"
   },
-  "eslintConfig": {
-    "extends": "@devacademy/eslint-config/react",
-    "ignorePatterns": [
-      "bundle.js"
-    ]
-  },
   "dependencies": {
     "express": "^4.17.2",
     "knex": "^2.5.1",
-    "sqlite3": "^5.1.6",
+    "sqlite3": "^5.1.7",
     "superagent": "^8.1.2"
   },
   "devDependencies": {
@@ -65,9 +69,18 @@
     "vite": "^5.0.0",
     "vitest": "^1.2.0"
   },
+  "eslintConfig": {
+    "extends": "@devacademy/eslint-config/react",
+    "ignorePatterns": [
+      "bundle.js"
+    ]
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
-  "browserslist": "> 2%, not dead"
+  "browserslist": "> 2%, not dead",
+  "compilerOptions": {
+    "allowJs": true
+  }
 }
