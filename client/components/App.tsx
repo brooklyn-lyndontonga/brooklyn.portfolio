@@ -1,15 +1,19 @@
-import { useFruits } from '../hooks/useFruits.ts'
+import GetProjects from '../../client/components/GetProjects'
+import {AddProjectForm} from '../../client/components/AddProjectForm'
+
 
 function App() {
-  const { data } = useFruits()
-
   return (
-    <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
-      </div>
-    </>
+    <div>
+      <header className="App-header">
+      <h1>Portfolio</h1>
+      </header>
+      <section className="App-body">
+        <GetProjects />
+        <AddProjectForm />
+      </section>
+
+    </div>
   )
 }
 

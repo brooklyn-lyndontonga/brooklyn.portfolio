@@ -1,21 +1,14 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-export function up(knex) {
-  return knex.schema.createTable('posts', (table) => {
+export async function up(knex) {
+  await knex.schema.createTable('projects', (table) => {
     table.increments('id').primary();
-    table.date('date');
-    table.string('title');
-    table.string('description');
-    table.string('link');
+    table.string('title').notNullable();
+    table.string('description').notNullable();
+    table.string('link').notNullable();
+    table.date('date').notNullable();
   });
-};
+}
 
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-export function down(knex)  {
-  return knex.schema.dropTableIfExists('projects');
-};
+export async function down(knex) {
+  await knex.schema.dropTable('projects');
+}
+
