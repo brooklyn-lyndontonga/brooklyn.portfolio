@@ -1,15 +1,15 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { deleteProject, getProjects, Project } from '../apis/apiClient.ts';
+import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { deleteProject, getProjects, Project } from '../apis/apiProjects.ts'
 
-const GetProjects = () => {
+const Projects = () => {
   const queryClient = useQueryClient()
   const {
-    data, 
+    data,
     isError,
     isPending,
-     
-    error
-    } = useQuery<Project[]>({
+
+    error,
+  } = useQuery<Project[]>({
     queryKey: ['projects'],
     queryFn: getProjects,
   })
@@ -24,7 +24,7 @@ const GetProjects = () => {
 
   const handleDelete = (id: number) => {
     deleteProject(id)
-    queryClient.invalidateQueries({queryKey: ['projects']})
+    queryClient.invalidateQueries({ queryKey: ['projects'] })
   }
 
   return (
@@ -42,4 +42,4 @@ const GetProjects = () => {
   )
 }
 
-export default GetProjects
+export default Projects;

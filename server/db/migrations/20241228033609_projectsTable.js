@@ -1,14 +1,14 @@
-export async function up(knex) {
-  await knex.schema.createTable('projects', (table) => {
+exports.up = async function(knex) {
+  await knex.schema.createTable('projects', function(table) {
     table.increments('id').primary();
     table.string('title').notNullable();
-    table.string('description').notNullable();
+    table.text('description').notNullable();
     table.string('link').notNullable();
     table.date('date').notNullable();
+    table.integer('skill_id').unsigned().references('id').inTable('skills');
   });
-}
+};
 
-export async function down(knex) {
+exports.down = async function(knex) {
   await knex.schema.dropTable('projects');
-}
-
+};

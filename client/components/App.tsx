@@ -1,5 +1,6 @@
-import GetProjects from '../../client/components/GetProjects'
-import {AddProjectForm} from '../../client/components/AddProjectForm'
+// import GetProjects from '../../client/components/GetProjects'
+import Nav from '../../client/components/Nav'
+// import {AddProjectForm} from '../../client/components/AddProjectForm'
 
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
       <h1>Portfolio</h1>
       </header>
       <section className="App-body">
-        <GetProjects />
-        <AddProjectForm />
+        <Nav />
+        {/* <GetProjects />
+        <AddProjectForm /> */}
       </section>
 
     </div>

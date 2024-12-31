@@ -1,7 +1,7 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import projectRoute from './routes/projectRouter'
+import projectRoute from './routes/projectRoute'
 
 const server = express()
 
